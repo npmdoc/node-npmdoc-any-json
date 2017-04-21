@@ -1,0 +1,624 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/laktak/any-json">any-json (v2.2.0)</a>
+</h1>
+<h4>Convert (almost) anything to JSON.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.any-json">module any-json</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.any-json.convert">
+            function <span class="apidocSignatureSpan">any-json.</span>convert
+            <span class="apidocSignatureSpan">(text, format)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.any-json.getEncoding">
+            function <span class="apidocSignatureSpan">any-json.</span>getEncoding
+            <span class="apidocSignatureSpan">(format)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">any-json.</span>async</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">any-json.</span>async.parser</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">any-json.</span>parser</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.any-json.async">module any-json.async</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.any-json.async.convert">
+            function <span class="apidocSignatureSpan">any-json.async.</span>convert
+            <span class="apidocSignatureSpan">(text, format, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">any-json.async.</span>parser</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.any-json.async.parser">module any-json.async.parser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.any-json.async.parser.cson">
+            function <span class="apidocSignatureSpan">any-json.async.parser.</span>cson
+            <span class="apidocSignatureSpan">(text, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.any-json.async.parser.csv">
+            function <span class="apidocSignatureSpan">any-json.async.parser.</span>csv
+            <span class="apidocSignatureSpan">(text, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.any-json.async.parser.hjson">
+            function <span class="apidocSignatureSpan">any-json.async.parser.</span>hjson
+            <span class="apidocSignatureSpan">(text, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.any-json.async.parser.ini">
+            function <span class="apidocSignatureSpan">any-json.async.parser.</span>ini
+            <span class="apidocSignatureSpan">(text, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.any-json.async.parser.json">
+            function <span class="apidocSignatureSpan">any-json.async.parser.</span>json
+            <span class="apidocSignatureSpan">(text, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.any-json.async.parser.json5">
+            function <span class="apidocSignatureSpan">any-json.async.parser.</span>json5
+            <span class="apidocSignatureSpan">(text, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.any-json.async.parser.xls">
+            function <span class="apidocSignatureSpan">any-json.async.parser.</span>xls
+            <span class="apidocSignatureSpan">(text, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.any-json.async.parser.xlsx">
+            function <span class="apidocSignatureSpan">any-json.async.parser.</span>xlsx
+            <span class="apidocSignatureSpan">(text, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.any-json.async.parser.xml">
+            function <span class="apidocSignatureSpan">any-json.async.parser.</span>xml
+            <span class="apidocSignatureSpan">(text, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.any-json.async.parser.yaml">
+            function <span class="apidocSignatureSpan">any-json.async.parser.</span>yaml
+            <span class="apidocSignatureSpan">(text, options, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.any-json.parser">module any-json.parser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.any-json.parser.cson">
+            function <span class="apidocSignatureSpan">any-json.parser.</span>cson
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.any-json.parser.hjson">
+            function <span class="apidocSignatureSpan">any-json.parser.</span>hjson
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.any-json.parser.ini">
+            function <span class="apidocSignatureSpan">any-json.parser.</span>ini
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.any-json.parser.json">
+            function <span class="apidocSignatureSpan">any-json.parser.</span>json
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.any-json.parser.json5">
+            function <span class="apidocSignatureSpan">any-json.parser.</span>json5
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.any-json.parser.yaml">
+            function <span class="apidocSignatureSpan">any-json.parser.</span>yaml
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.any-json" id="apidoc.module.any-json">module any-json</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.any-json.convert" id="apidoc.element.any-json.convert">
+        function <span class="apidocSignatureSpan">any-json.</span>convert
+        <span class="apidocSignatureSpan">(text, format)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function convert(text, format) {
+  format=getFormat(format);
+  if (!format) throw new Error("Missing format!");
+
+  var parse=parser[format.toLowerCase()];
+  if (parse) return parse(text);
+  else throw new Error("Unknown format "+format+"!");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.any-json.getEncoding" id="apidoc.element.any-json.getEncoding">
+        function <span class="apidocSignatureSpan">any-json.</span>getEncoding
+        <span class="apidocSignatureSpan">(format)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getEncoding(format) {
+  format=getFormat(format);
+  switch (format) {
+    case "xlsx": return "binary";
+    case "xls": return "binary";
+    default: return "utf8";
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.any-json.async" id="apidoc.module.any-json.async">module any-json.async</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.any-json.async.convert" id="apidoc.element.any-json.async.convert">
+        function <span class="apidocSignatureSpan">any-json.async.</span>convert
+        <span class="apidocSignatureSpan">(text, format, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function convertAsync(text, format, options, cb) {
+  if (format &amp;&amp; format[0]===".") format=format.substr(1);
+  if (!format) return cb(new Error("missing format"));
+
+  var parse=parserAsync[format.toLowerCase()];
+  if (parse) parse(text, options, cb);
+  else cb(new Error("Unknown format "+format+"!"));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.any-json.async.parser" id="apidoc.module.any-json.async.parser">module any-json.async.parser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.any-json.async.parser.cson" id="apidoc.element.any-json.async.parser.cson">
+        function <span class="apidocSignatureSpan">any-json.async.parser.</span>cson
+        <span class="apidocSignatureSpan">(text, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cson = function (text, options, cb) {
+  process.nextTick(function() {
+    var obj;
+    try { obj=parser[format](text); }
+    catch (err) { return cb(err); }
+    cb(null, obj);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.any-json.async.parser.csv" id="apidoc.element.any-json.async.parser.csv">
+        function <span class="apidocSignatureSpan">any-json.async.parser.</span>csv
+        <span class="apidocSignatureSpan">(text, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">csv = function (text, options, cb) {
+  try { wrap(text, options, cb); }
+  catch (err) { cb(err); }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.any-json.async.parser.hjson" id="apidoc.element.any-json.async.parser.hjson">
+        function <span class="apidocSignatureSpan">any-json.async.parser.</span>hjson
+        <span class="apidocSignatureSpan">(text, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hjson = function (text, options, cb) {
+  process.nextTick(function() {
+    var obj;
+    try { obj=parser[format](text); }
+    catch (err) { return cb(err); }
+    cb(null, obj);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.any-json.async.parser.ini" id="apidoc.element.any-json.async.parser.ini">
+        function <span class="apidocSignatureSpan">any-json.async.parser.</span>ini
+        <span class="apidocSignatureSpan">(text, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ini = function (text, options, cb) {
+  process.nextTick(function() {
+    var obj;
+    try { obj=parser[format](text); }
+    catch (err) { return cb(err); }
+    cb(null, obj);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.any-json.async.parser.json" id="apidoc.element.any-json.async.parser.json">
+        function <span class="apidocSignatureSpan">any-json.async.parser.</span>json
+        <span class="apidocSignatureSpan">(text, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">json = function (text, options, cb) {
+  process.nextTick(function() {
+    var obj;
+    try { obj=parser[format](text); }
+    catch (err) { return cb(err); }
+    cb(null, obj);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.any-json.async.parser.json5" id="apidoc.element.any-json.async.parser.json5">
+        function <span class="apidocSignatureSpan">any-json.async.parser.</span>json5
+        <span class="apidocSignatureSpan">(text, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">json5 = function (text, options, cb) {
+  process.nextTick(function() {
+    var obj;
+    try { obj=parser[format](text); }
+    catch (err) { return cb(err); }
+    cb(null, obj);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.any-json.async.parser.xls" id="apidoc.element.any-json.async.parser.xls">
+        function <span class="apidocSignatureSpan">any-json.async.parser.</span>xls
+        <span class="apidocSignatureSpan">(text, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">xls = function (text, options, cb) {
+  try { wrap(text, options, cb); }
+  catch (err) { cb(err); }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.any-json.async.parser.xlsx" id="apidoc.element.any-json.async.parser.xlsx">
+        function <span class="apidocSignatureSpan">any-json.async.parser.</span>xlsx
+        <span class="apidocSignatureSpan">(text, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">xlsx = function (text, options, cb) {
+  try { wrap(text, options, cb); }
+  catch (err) { cb(err); }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.any-json.async.parser.xml" id="apidoc.element.any-json.async.parser.xml">
+        function <span class="apidocSignatureSpan">any-json.async.parser.</span>xml
+        <span class="apidocSignatureSpan">(text, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">xml = function (text, options, cb) {
+  try { wrap(text, options, cb); }
+  catch (err) { cb(err); }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.any-json.async.parser.yaml" id="apidoc.element.any-json.async.parser.yaml">
+        function <span class="apidocSignatureSpan">any-json.async.parser.</span>yaml
+        <span class="apidocSignatureSpan">(text, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">yaml = function (text, options, cb) {
+  process.nextTick(function() {
+    var obj;
+    try { obj=parser[format](text); }
+    catch (err) { return cb(err); }
+    cb(null, obj);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.any-json.parser" id="apidoc.module.any-json.parser">module any-json.parser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.any-json.parser.cson" id="apidoc.element.any-json.parser.cson">
+        function <span class="apidocSignatureSpan">any-json.parser.</span>cson
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cson = function (text) { return require("cson-safe").parse(text); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.any-json.parser.hjson" id="apidoc.element.any-json.parser.hjson">
+        function <span class="apidocSignatureSpan">any-json.parser.</span>hjson
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hjson = function (text) { return require("hjson").parse(text); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.any-json.parser.ini" id="apidoc.element.any-json.parser.ini">
+        function <span class="apidocSignatureSpan">any-json.parser.</span>ini
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ini = function (text) { return require("ini").parse(text); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.any-json.parser.json" id="apidoc.element.any-json.parser.json">
+        function <span class="apidocSignatureSpan">any-json.parser.</span>json
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">json = function (text) { return JSON.parse(require("strip-json-comments")(text)); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.any-json.parser.json5" id="apidoc.element.any-json.parser.json5">
+        function <span class="apidocSignatureSpan">any-json.parser.</span>json5
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">json5 = function (text) { return require("json5").parse(text); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.any-json.parser.yaml" id="apidoc.element.any-json.parser.yaml">
+        function <span class="apidocSignatureSpan">any-json.parser.</span>yaml
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">yaml = function (text) { return require("js-yaml").safeLoad(text); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
